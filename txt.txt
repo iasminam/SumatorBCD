@@ -1,5 +1,23 @@
 Sumator BCD (Verilog) 
 
+Adunarea a 2 numere reprezentate în BCD
+
 În cadrul acestui proiect am implementat și testat un sumator BCD care aduna
  cifră cu cifră, acestea fiind scrise pe 4 biți, ținând cont de carry-uri rezultând sa ofere rezultate precise.
  Acest sumator putea fi parametrizabil, astfel oferind o mai mare flexibilitate pentru utilizator.
+
+  Funcționalitatea proiectului 
+Inițial se determină de câte module este nevoie pentru realizarea proiectului. Modul meu de rezolvare a necesitat 6 module: FAC, Sumator, sumat, level2, BCDp si Sumator_TB. 
+a. FAC - reprezintă modulul în care am realizat adunarea unui bit. 
+b. Sumator - reprezintă modulul în care am adunat o cifra pe 4 biți, iar în cazul în care rezultatul ar fi fost mai mare sau egal cu 10, am pus „cor6” pe     „1”. 
+c. sumat - reprezintă modulul în care am stabilit dacă am transport făcând o verificare finală a adunării (în cazul în care suma cifrelor după adunarea cu transportul ar fi 
+fost mai mare sau egala cu 10(cor_dupa_add=1) sau în cazul în care pe nivelul anterior s-a format un 
+transport(cor6=1)), rezultând transportul pentru următorul grup de cate 4 biți. 
+d. level2 – reprezintă modulul în care am nivelul 2 
+e. BCDp – reprezintă modulul parametrizabil al adunării BCD 
+f. Sumator_TB – reprezintă testbench-ul făcut de mine 
+
+ Testbench
+Acesta a fost realizat incluzând un exemplu pentru funcționalitatea pe 8 biți, unul pentru 32 de biți si 10 exemple pentru 16 funcționalitatea pe biți. 
+Afișarea rezultatelor este făcută astfel: 
+o[17] o[16:12] o[11:8] o[7:4] o[3:0].
