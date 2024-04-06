@@ -1,0 +1,5 @@
+Sumator BCD (Verilog) 
+
+În cadrul acestui proiect am implementat și testat un sumator BCD care aduna
+ cifră cu cifră, acestea fiind scrise pe 4 biți, ținând cont de carry-uri rezultând sa ofere rezultate precise.
+ Acest sumator putea fi parametrizabil, astfel oferind o mai mare flexibilitate pentru utilizator.
